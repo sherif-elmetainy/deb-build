@@ -1,0 +1,16 @@
+[Unit]
+Description=FOO Service
+After=network.target
+
+[Service]
+ExecStart=/opt/foo/bin/foo.sh
+WorkingDirectory=/var/foo
+KillSignal=SIGINT
+Restart=on-failure
+User=foo
+StandardOutput=null
+StandardError=journal
+SyslogIdentifier=foo
+
+[Install]
+WantedBy=multi-user.target

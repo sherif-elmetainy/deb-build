@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+# Stop and disable the service
+systemctl stop foo.service
+systemctl disable foo.service
+

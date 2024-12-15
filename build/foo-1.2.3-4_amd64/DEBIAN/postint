@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+# Add foo user if it does not exist
+getent passwd foo || useradd -c "Foo" -r -d /var/foo -s /sbin/nologin foo -U
+
+chmod -R 755 /var/foo
+chown -R foo:foo /var/foo
+
+systemctl enable foo.service
+systemctl start foo.service

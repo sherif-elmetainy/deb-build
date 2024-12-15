@@ -1,0 +1,8 @@
+Package: foo
+Version: 1.2.3-4
+Maintainer: John Doe <john.doe@example.com>
+Description: Foo Package Description.
+Architecture: amd64
+Depends: systemd
+Section: misc
+Priority: optional
